@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sign in - HackMD</title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link href="https://assets.hackmd.io/build/font-vendor.85aea95458609ff85035.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/common-vendor.8badda337754ab1de336.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/auth-vendor.d05131935c3a4ffdf614.css" rel="stylesheet"><link href="https://assets.hackmd.io/build/auth.476af19cfb7b9d4c975b.css" rel="stylesheet">
+
+    <style>
+        .grecaptcha-badge {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<header class="container-fluid" id="header">
+    <div class="col-s-12">
+        <a class="btn-link" ><i class="fa fa-file-text"></i>&nbsp;HackMD</a>
+    </div>
+</header>
+
+<div id="site-content" class="site-wrapper hmd-pt-1/4">
+    <div id="login">
+        <div class="user-container" style="max-width: 440px;">
+            <h3>登入</h3>
+
+            <form data-toggle="validator" role="form" class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded" id="signin-form">
+                <div class="hmd-dn"><input type="hidden" name="_csrf" value="eZFANarq-L5Wv5__FBi-lmtZ28o2S8_MDPOo"></div>
+                <div class="hmd-dn"><input type="hidden" name="create_team" value="false"></div>
+                <div class="hmd-dn"><input type="hidden" name="create_paid_team" value="false"></div>
+
+                <div class="form-group  ">
+                    <label for="email" class="control-label">Email</label>
+
+                    <div class="input-block">
+
+                        <input type="email" class="form-control" name="email" placeholder="您的 Email" required autocomplete="email">
+
+                        <span class="error-sign"></span>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <label for="password" class="control-label">密碼</label>
+                    <span class="help-block control-label with-errors pull-right" style="display: inline;"></span>
+                    <div class="input-block">
+                        <input type="password" class="form-control" name="password" placeholder="您的密碼" required autocomplete="current-password" maxlength="128">
+                        <span class="error-sign"></span>
+                        <span class="control-label pull-right" style="font-size: 13px; margin-top: 5px;"><a  style="text-decoration: underline;">忘記密碼</a></span>
+
+                    </div>
+                </div>
+
+                <div style="text-align: center; padding-top: 15px; margin-bottom: 0px;">
+                    <input type="hidden" id="recaptcha-token" name="g-recaptcha-response">
+                    <input type="submit" class="btn btn-success btn-large" formaction="https://hackmd.io/login" value="登入">
+                </div>
+            </form>
+            <p class="separator">或是</p>
+            <p>繼續登入，代表您同意<a target="_blank">服務條款</a>。</p>
+
+            <div class="social-buttons-container">
+
+                <div id="sign-in-with-google-button"></div>
+
+                <a  class="btn btn-lg btn-block btn-social btn-facebook">
+                    <i class="fa fa-facebook"></i> 透過 Facebook 登入
+                </a>
+
+                <a  class="btn btn-lg btn-block btn-social btn-twitter">
+                    <i class="fa fa-twitter"></i> 透過 Twitter 登入
+                </a>
+
+                <a  class="btn btn-lg btn-block btn-social btn-github">
+                    <i class="fa fa-github"></i> 透過 GitHub 登入
+                </a>
+
+                <a  class="btn btn-lg btn-block btn-social btn-dropbox">
+                    <i class="fa fa-dropbox"></i> 透過 Dropbox 登入
+                </a>
+
+                <a href="#" class="bg-white btn btn-block btn-social btn-web3 bg-gray-800 hocus:bg-[#2b2b2b] text-white hocus:text-white">
+                    <img src="https://hackmd.io/images/wallet.svg" style="max-height: 20px; margin-top: 8px; margin-left: 6px; border: none;">
+                    <span class="sign-in-wallet-text">錢包登入</span>
+
+                    <div class="inline-flex items-center justify-between w-full hidden web3-wallet-info">
+                        <span>錢包(<span class="web3-wallet-address"></span>)</span>
+
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                    </div>
+                </a>
+
+                <small class="web3-wallet-info hidden text-left hocus:text-white underline hocus:underline block pt-2 ui-disconnect-connected-wallets text-gray-600 cursor-pointer">連結其他錢包</small>
+
+            </div>
+            <div >
+                <p>第一次使用 HackMD？ <a  class="plausible-event-name=LoginModalSignUp">註冊</a></p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>
